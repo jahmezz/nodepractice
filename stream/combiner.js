@@ -4,9 +4,9 @@
 var combine = require('stream-combiner');
 var split = require('split');
 var zlib = require('zlib');
+var through = require('through');
 
 module.exports = function () {
-    var titles_by_genre = {};
     var grouper = {
         genres: {},
         current_genre: undefined,
@@ -29,23 +29,27 @@ module.exports = function () {
             }
         }
     };
-    return combine(split(), parser, gzip);
-
-    function parser(line) {
-        var obj = JSON.parse(line);
-        if(obj.type === 'genre') {
-            type = obj.type;
-            obj[type] = [];
-        }
-        else {
-            obj[type].push(obj.name);
-        }
-    }
-
-    function gzip() {
-        var zipFile = zlib.createGzip();
-        list.pipe(zipFile);
-        this.queue(zipFile);
-    }
-    
+    var record, json;
+    return combine(
+        split(),
+        through(function (text) {
+            if(text.length > 0) this.queue(JSON.parse(text));
+        }),
+        through(
+            function on_write(row) {
+                record = grouper.on_row(row);
+                if(record) {
+                    var json = JSON.stringify(record);
+                    this.queue(json);
+                    this.queue('\n');
+                }
+            },
+            function on_end() {
+                record = grouper.on_row({type: 'genre', name: undefined});
+                json = JSON.stringify(record);
+                this.queue(json);
+                this.queue('\n');
+                this.queue(null);
+            }),
+        zlib.createGzip());
 };
