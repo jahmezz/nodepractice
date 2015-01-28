@@ -1,0 +1,9 @@
+var through = require('through');
+var tr = through(write, end);
+var cap = false;
+process.stdin
+	.pipe(split())
+	.pipe(process.stdout);
+function write (buf) {
+	this.queue(buf.toString());
+}
