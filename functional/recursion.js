@@ -1,11 +1,26 @@
 /*jslint node: true */
 'use strict';
 
-function reduce(arr, fn, initial) {
-    return (function step(idx, value) {
-        if(idx > arr.length -1) return value;
-        return step(idx + 1, fn(value, arr[idx], idx, arr));
-    })(0, initial);
+function getDependencies(tree, result) {
+    var result = result || [];
+    var deps = tree.dependencies || {};
+    if (!tree.dependencies) return [];
+
+    //iterate through the tree's dependecies
+    Object.keys(deps).forEach(function (dep) {
+        //create string from dependency and version
+        var depStr = dep + '@' + deps[dep].version;
+
+        //if not already present in array, push
+        if (result.indexOf(depStr) < 0) {
+            result.push(depStr);
+        }
+
+        //call again at the next level
+        getDependencies(deps[dep], result);
+    });
+
+    return result.sort();
 }
 
-module.exports = reduce;
+module.exports = getDependencies;
