@@ -1,10 +1,10 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'level' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'fs' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.36
 4 verbose node symlink /usr/bin/node
-5 verbose cache add [ 'level', null ]
-6 verbose cache add name=undefined spec="level" args=["level",null]
+5 verbose cache add [ 'fs', null ]
+6 verbose cache add name=undefined spec="fs" args=["fs",null]
 7 verbose parsed url { protocol: null,
 7 verbose parsed url   slashes: null,
 7 verbose parsed url   auth: null,
@@ -14,142 +14,118 @@
 7 verbose parsed url   hash: null,
 7 verbose parsed url   search: null,
 7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'level',
-7 verbose parsed url   path: 'level',
-7 verbose parsed url   href: 'level' }
-8 silly lockFile ad60c535-level level
-9 verbose lock level /home/james/.npm/ad60c535-level.lock
-10 silly lockFile ad60c535-level level
-11 silly lockFile ad60c535-level level
-12 verbose addNamed [ 'level', '' ]
+7 verbose parsed url   pathname: 'fs',
+7 verbose parsed url   path: 'fs',
+7 verbose parsed url   href: 'fs' }
+8 silly lockFile 3f4bb586-fs fs
+9 verbose lock fs /home/james/.npm/3f4bb586-fs.lock
+10 silly lockFile 3f4bb586-fs fs
+11 silly lockFile 3f4bb586-fs fs
+12 verbose addNamed [ 'fs', '' ]
 13 verbose addNamed [ null, '*' ]
-14 silly lockFile e1aca7fe-level level@
-15 verbose lock level@ /home/james/.npm/e1aca7fe-level.lock
-16 silly addNameRange { name: 'level', range: '*', hasData: false }
-17 verbose request where is /level
+14 silly lockFile a107b96b-fs fs@
+15 verbose lock fs@ /home/james/.npm/a107b96b-fs.lock
+16 silly addNameRange { name: 'fs', range: '*', hasData: false }
+17 verbose request where is /fs
 18 verbose request registry https://registry.npmjs.org/
-19 verbose request id 5ea2ac09f19fe35d
-20 verbose url raw /level
-21 verbose url resolving [ 'https://registry.npmjs.org/', './level' ]
-22 verbose url resolved https://registry.npmjs.org/level
-23 verbose request where is https://registry.npmjs.org/level
-24 info trying registry request attempt 1 at 01:25:11
-25 verbose etag "1X4Y8XK5PTJTVBSLS1YZY5TQY"
-26 http GET https://registry.npmjs.org/level
-27 http 304 https://registry.npmjs.org/level
-28 silly registry.get cb [ 304,
-28 silly registry.get   { date: 'Wed, 11 Mar 2015 08:25:11 GMT',
-28 silly registry.get     server: 'Apache',
-28 silly registry.get     via: '1.1 varnish',
-28 silly registry.get     'last-modified': 'Wed, 11 Mar 2015 08:25:11 GMT',
-28 silly registry.get     'cache-control': 'max-age=60',
-28 silly registry.get     etag: '"1X4Y8XK5PTJTVBSLS1YZY5TQY"',
-28 silly registry.get     age: '0',
-28 silly registry.get     'x-served-by': 'cache-lax1431-LAX',
-28 silly registry.get     'x-cache': 'MISS',
-28 silly registry.get     'x-cache-hits': '0',
-28 silly registry.get     'x-timer': 'S1426062311.748133,VS0,VE39',
-28 silly registry.get     vary: 'Accept',
-28 silly registry.get     'content-length': '0',
-28 silly registry.get     'keep-alive': 'timeout=10, max=50',
-28 silly registry.get     connection: 'Keep-Alive' } ]
-29 verbose etag https://registry.npmjs.org/level from cache
-30 silly addNameRange number 2 { name: 'level', range: '*', hasData: true }
-31 silly addNameRange versions [ 'level',
-31 silly addNameRange   [ '0.0.0',
-31 silly addNameRange     '0.0.1',
-31 silly addNameRange     '0.8.0',
-31 silly addNameRange     '0.9.0',
-31 silly addNameRange     '0.10.0',
-31 silly addNameRange     '0.12.0',
-31 silly addNameRange     '0.13.0',
-31 silly addNameRange     '0.14.0',
-31 silly addNameRange     '0.15.0',
-31 silly addNameRange     '0.16.0',
-31 silly addNameRange     '0.17.0',
-31 silly addNameRange     '0.17.0-1',
-31 silly addNameRange     '0.18.0' ] ]
-32 verbose addNamed [ 'level', '0.18.0' ]
-33 verbose addNamed [ '0.18.0', '0.18.0' ]
-34 silly lockFile ef8196f4-level-0-18-0 level@0.18.0
-35 verbose lock level@0.18.0 /home/james/.npm/ef8196f4-level-0-18-0.lock
-36 silly lockFile ef8196f4-level-0-18-0 level@0.18.0
-37 silly lockFile ef8196f4-level-0-18-0 level@0.18.0
-38 silly lockFile e1aca7fe-level level@
-39 silly lockFile e1aca7fe-level level@
-40 silly resolved [ { name: 'level',
-40 silly resolved     description: 'Fast & simple storage - a Node.js-style LevelDB wrapper (a convenience package bundling LevelUP & LevelDOWN)',
-40 silly resolved     version: '0.18.0',
-40 silly resolved     contributors:
-40 silly resolved      [ [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object],
-40 silly resolved        [Object] ],
-40 silly resolved     repository: { type: 'git', url: 'https://github.com/Level/level.git' },
-40 silly resolved     homepage: 'https://github.com/Level/level',
-40 silly resolved     keywords: [ 'leveldb', 'stream', 'database', 'db', 'store', 'storage', 'json' ],
-40 silly resolved     main: 'level.js',
-40 silly resolved     dependencies: { leveldown: '~0.10.0', 'level-packager': '~0.18.0' },
-40 silly resolved     devDependencies: { tape: '*' },
-40 silly resolved     scripts: { test: 'node ./test.js' },
-40 silly resolved     license: 'MIT',
-40 silly resolved     bugs: { url: 'https://github.com/Level/level/issues' },
-40 silly resolved     _id: 'level@0.18.0',
-40 silly resolved     dist:
-40 silly resolved      { shasum: 'e1a3f4cad65fc02e25070a47d63d7b527361c1cf',
-40 silly resolved        tarball: 'http://registry.npmjs.org/level/-/level-0.18.0.tgz' },
-40 silly resolved     _from: 'level@',
-40 silly resolved     _npmVersion: '1.3.14',
-40 silly resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
-40 silly resolved     maintainers: [ [Object] ],
-40 silly resolved     directories: {},
-40 silly resolved     _shasum: 'e1a3f4cad65fc02e25070a47d63d7b527361c1cf',
-40 silly resolved     _resolved: 'https://registry.npmjs.org/level/-/level-0.18.0.tgz',
-40 silly resolved     readme: 'ERROR: No README data found!' } ]
-41 info install level@0.18.0 into /usr/lib
-42 info installOne level@0.18.0
-43 verbose lib/node_modules/level unbuild
-44 verbose tar unpack /home/james/.npm/level/0.18.0/package.tgz
-45 silly lockFile 32b90077-tar-usr-lib-node-modules-level tar:///usr/lib/node_modules/level
-46 verbose lock tar:///usr/lib/node_modules/level /home/james/.npm/32b90077-tar-usr-lib-node-modules-level.lock
-47 silly lockFile 5cca7e31-mes-npm-level-0-18-0-package-tgz tar:///home/james/.npm/level/0.18.0/package.tgz
-48 verbose lock tar:///home/james/.npm/level/0.18.0/package.tgz /home/james/.npm/5cca7e31-mes-npm-level-0-18-0-package-tgz.lock
-49 silly gunzTarPerm modes [ '775', '664' ]
-50 error Error: EACCES, mkdir '/usr/lib/node_modules/level'
-50 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/level']
-50 error   errno: 3,
-50 error   code: 'EACCES',
-50 error   path: '/usr/lib/node_modules/level',
-50 error   fstream_type: 'Directory',
-50 error   fstream_path: '/usr/lib/node_modules/level',
-50 error   fstream_class: 'DirWriter',
-50 error   fstream_stack:
-50 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
-50 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
-50 error      'Object.oncomplete (fs.js:108:15)' ] }
-51 error Please try running this command again as root/Administrator.
-52 error System Linux 3.16.0-30-generic
-53 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "level"
-54 error cwd /home/james/Documents/GitHub/nodepractice/levelmeup
-55 error node -v v0.10.36
-56 error npm -v 1.4.28
-57 error path /usr/lib/node_modules/level
-58 error fstream_path /usr/lib/node_modules/level
-59 error fstream_type Directory
-60 error fstream_class DirWriter
-61 error code EACCES
-62 error errno 3
-63 error stack Error: EACCES, mkdir '/usr/lib/node_modules/level'
-64 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
-64 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
-64 error fstream_stack Object.oncomplete (fs.js:108:15)
-65 verbose exit [ 3, true ]
+19 verbose request id d4f03673c632e003
+20 verbose url raw /fs
+21 verbose url resolving [ 'https://registry.npmjs.org/', './fs' ]
+22 verbose url resolved https://registry.npmjs.org/fs
+23 verbose request where is https://registry.npmjs.org/fs
+24 info trying registry request attempt 1 at 02:59:16
+25 http GET https://registry.npmjs.org/fs
+26 http 200 https://registry.npmjs.org/fs
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Wed, 11 Mar 2015 09:59:17 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"AK2S2YF9S50J227DAKLPQ9TIZ"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '1577',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-lax1422-LAX',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1426067957.456728,VS0,VE275',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'fs', range: '*', hasData: true }
+29 silly addNameRange versions [ 'fs', [ '0.0.0', '0.0.2' ] ]
+30 verbose addNamed [ 'fs', '0.0.2' ]
+31 verbose addNamed [ '0.0.2', '0.0.2' ]
+32 silly lockFile afea0479-fs-0-0-2 fs@0.0.2
+33 verbose lock fs@0.0.2 /home/james/.npm/afea0479-fs-0-0-2.lock
+34 silly lockFile f18d0b15-gistry-npmjs-org-fs-fs-0-0-2-tgz https://registry.npmjs.org/fs/-/fs-0.0.2.tgz
+35 verbose lock https://registry.npmjs.org/fs/-/fs-0.0.2.tgz /home/james/.npm/f18d0b15-gistry-npmjs-org-fs-fs-0-0-2-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/fs/-/fs-0.0.2.tgz',
+36 verbose addRemoteTarball   'e1f244ef3933c1b2a64bd4799136060d0f5914f8' ]
+37 info retry fetch attempt 1 at 02:59:17
+38 verbose fetch to= /tmp/npm-8276-hSVlVQuw/registry.npmjs.org/fs/-/fs-0.0.2.tgz
+39 http GET https://registry.npmjs.org/fs/-/fs-0.0.2.tgz
+40 http 200 https://registry.npmjs.org/fs/-/fs-0.0.2.tgz
+41 silly lockFile f18d0b15-gistry-npmjs-org-fs-fs-0-0-2-tgz https://registry.npmjs.org/fs/-/fs-0.0.2.tgz
+42 silly lockFile f18d0b15-gistry-npmjs-org-fs-fs-0-0-2-tgz https://registry.npmjs.org/fs/-/fs-0.0.2.tgz
+43 silly lockFile afea0479-fs-0-0-2 fs@0.0.2
+44 silly lockFile afea0479-fs-0-0-2 fs@0.0.2
+45 silly lockFile a107b96b-fs fs@
+46 silly lockFile a107b96b-fs fs@
+47 silly resolved [ { name: 'fs',
+47 silly resolved     version: '0.0.2',
+47 silly resolved     description: '',
+47 silly resolved     main: 'index.js',
+47 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+47 silly resolved     author: '',
+47 silly resolved     license: 'MIT',
+47 silly resolved     _id: 'fs@0.0.2',
+47 silly resolved     _shasum: 'e1f244ef3933c1b2a64bd4799136060d0f5914f8',
+47 silly resolved     _from: 'fs@',
+47 silly resolved     _npmVersion: '1.4.14',
+47 silly resolved     _npmUser: { name: 'alsotang', email: 'alsotang@gmail.com' },
+47 silly resolved     maintainers: [ [Object] ],
+47 silly resolved     dist:
+47 silly resolved      { shasum: 'e1f244ef3933c1b2a64bd4799136060d0f5914f8',
+47 silly resolved        tarball: 'http://registry.npmjs.org/fs/-/fs-0.0.2.tgz' },
+47 silly resolved     directories: {},
+47 silly resolved     _resolved: 'https://registry.npmjs.org/fs/-/fs-0.0.2.tgz' } ]
+48 info install fs@0.0.2 into /usr/lib
+49 info installOne fs@0.0.2
+50 verbose lib/node_modules/fs unbuild
+51 verbose tar unpack /home/james/.npm/fs/0.0.2/package.tgz
+52 silly lockFile 9e7a1c49-tar-usr-lib-node-modules-fs tar:///usr/lib/node_modules/fs
+53 verbose lock tar:///usr/lib/node_modules/fs /home/james/.npm/9e7a1c49-tar-usr-lib-node-modules-fs.lock
+54 silly lockFile 08d74f99-e-james-npm-fs-0-0-2-package-tgz tar:///home/james/.npm/fs/0.0.2/package.tgz
+55 verbose lock tar:///home/james/.npm/fs/0.0.2/package.tgz /home/james/.npm/08d74f99-e-james-npm-fs-0-0-2-package-tgz.lock
+56 silly gunzTarPerm modes [ '775', '664' ]
+57 error Error: EACCES, mkdir '/usr/lib/node_modules/fs'
+57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/fs']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/lib/node_modules/fs',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/lib/node_modules/fs',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:108:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Linux 3.16.0-30-generic
+60 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "fs"
+61 error cwd /home/james/Documents/GitHub/nodepractice/levelmeup
+62 error node -v v0.10.36
+63 error npm -v 1.4.28
+64 error path /usr/lib/node_modules/fs
+65 error fstream_path /usr/lib/node_modules/fs
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/fs'
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:108:15)
+72 verbose exit [ 3, true ]
